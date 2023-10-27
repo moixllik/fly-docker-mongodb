@@ -1,0 +1,15 @@
+# fly.toml app configuration file generated for snowy-sun-2583 on 2023-10-27T17:50:44Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "snowy-sun-2583"
+primary_region = "mia"
+
+[http_service]
+  min_machines_running = 0
+  processes = ["app"]
+
+[mounts]
+  source = "myapp_data"
+  destination = "/data"
